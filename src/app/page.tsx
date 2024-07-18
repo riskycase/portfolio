@@ -3,6 +3,8 @@ import Home from "@/sections/Home";
 import Projects from "@/sections/Projects";
 import { Box, Divider, theme } from "@chakra-ui/react";
 
+export const runtime = "edge";
+
 export default function Page() {
   return (
     <Box

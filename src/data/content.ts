@@ -70,7 +70,7 @@ export const contactDetails: ContactDetails[] = [
   },
   {
     name: "riskycase",
-    link: "https://github.com/riskycase",
+    link: "https://www.linkedin.com/in/riskycase/",
     icon: FaLinkedin,
   },
   {
