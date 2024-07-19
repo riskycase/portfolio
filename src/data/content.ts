@@ -1,4 +1,5 @@
-import { Project, MenuItem, ContactDetails } from "@/types";
+import { Project, MenuItem, ContactDetails, ExperienceDetails } from "@/types";
+import autoCampnetImage from "@/../public/autoCampnetImage.png";
 import linkscapeImage from "@/../public/linkscape.png";
 import mqttMockImage from "@/../public/mqtt-mock.png";
 import broadcastemImage from "@/../public/broadcastem.png";
@@ -12,16 +13,49 @@ export const menus: MenuItem[] = [
     link: "#home",
   },
   {
+    name: "Experience",
+    link: "#experience",
+  },
+  {
     name: "Projects",
     link: "#projects",
+  },
+  {
+    name: "Contact",
+    link: "#contact",
   },
   {
     name: "Resume",
     link: "https://resume.riskycase.in",
   },
+];
+
+export const experiences: ExperienceDetails[] = [
   {
-    name: "Contact",
-    link: "#contact",
+    comapany: "Amazon.com Inc",
+    title: "Software Development Engineer Intern",
+    start: new Date(2023, 6),
+    end: new Date(2023, 11),
+    location: "Bangalore, KA",
+    description:
+      "Added refund ARN information to transactions screen in AU region for customers to track refund status directly with the bank.",
+    points: [
+      "Estimated to reduce 30K customer support tickets in AU/SG region and approximately 4.7MN customer support tickets globally.",
+      "Used Java and Groovy in backend and Scala for frontend.",
+    ],
+  },
+  {
+    comapany: "Shalaka Connected Devices LLP ",
+    title: "Summer Intern",
+    start: new Date(2022, 5),
+    end: new Date(2022, 6),
+    location: "Pune, MH",
+    description:
+      "Used python plugin for VLC media player to make digital screen controller.",
+    points: [
+      "Potentially deployed to 100 factory floors with about 350 screens.",
+      "Used Python on Raspberry Pi and HiveMQ MQTT server to control VLC instance which is broadcasted to digital display.",
+    ],
   },
 ];
 
@@ -31,6 +65,7 @@ export const projects: Project[] = [
     description:
       "Desktop application developed using the Tauri framework in Rustlang. Allows automated login in laptops to on campus wifi for all 4000+ students of BITS Goa Campus",
     link: "https://github.com/Devsoc-BPGC/auto-campnet",
+    image: autoCampnetImage,
   },
   {
     name: "Linkscape",

@@ -1,5 +1,6 @@
 import { Project } from "@/types";
-import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import { Box, Divider, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import NextLink from "next/link";
 import Image from "next/image";
 
@@ -11,7 +12,8 @@ export default function ProjectCard({
   index: number;
 }) {
   return (
-    <Link as={NextLink} href={project.link}>
+    <>
+      {index !== 0 && <Divider />}
       <Flex
         alignItems="start"
         width="100%"
@@ -38,11 +40,16 @@ export default function ProjectCard({
             }}
           />
         )}
-        <Box>
-          <Heading>{project.name}</Heading>
+        <Box maxWidth="24rem">
+          <Link as={NextLink} href={project.link}>
+            <Flex gap={2} alignItems="center">
+              <Heading>{project.name}</Heading>
+              {project.link && <FaExternalLinkAlt scale={0.8} />}
+            </Flex>
+          </Link>
           <Text>{project.description}</Text>
         </Box>
       </Flex>
-    </Link>
+    </>
   );
 }

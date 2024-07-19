@@ -18,3 +18,13 @@ interface ContactDetails {
   link: string;
   icon: IconType;
 }
+
+interface ExperienceDetails {
+  comapany: string;
+  title: string;
+  start: Date;
+  end: Date;
+  location: string;
+  description: string;
+  points: string[];
+}

@@ -1,7 +1,8 @@
 import Contact from "@/sections/Contact";
+import Experience from "@/sections/Experience";
 import Home from "@/sections/Home";
 import Projects from "@/sections/Projects";
-import { Box, Divider, theme } from "@chakra-ui/react";
+import { Box, theme } from "@chakra-ui/react";
 
 export const runtime = "edge";
 
@@ -14,8 +15,8 @@ export default function Page() {
       }}
     >
       <Home />
+      <Experience />
       <Projects />
-      <Divider />
       <Contact />
     </Box>
   );

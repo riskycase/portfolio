@@ -1,5 +1,6 @@
 import { menus } from "@/data/content";
 import {
+  Box,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -25,21 +26,25 @@ export default function Navbar() {
   const menuRef = useRef(null);
   return (
     <header className="w-full sticky top-0 z-10">
-      <Flex
+      <Box
         width="100%"
-        direction="row"
-        alignItems="center"
-        gap={2}
         padding={4}
         backgroundColor={theme.colors.gray[700]}
         color={theme.colors.gray[50]}
       >
         <Show above="md">
-          {menus.map((menu, index) => (
-            <Link key={index} as={NextLink} href={menu.link}>
-              {menu.name}
-            </Link>
-          ))}
+          <Flex
+            direction="row"
+            alignItems="center"
+            justifyContent="end"
+            gap={2}
+          >
+            {menus.map((menu, index) => (
+              <Link key={index} as={NextLink} href={menu.link}>
+                {menu.name}
+              </Link>
+            ))}
+          </Flex>
         </Show>
         <Hide above="md">
           <IconButton
@@ -85,7 +90,7 @@ export default function Navbar() {
             </DrawerContent>
           </Drawer>
         </Hide>
-      </Flex>
+      </Box>
     </header>
   );
 }
