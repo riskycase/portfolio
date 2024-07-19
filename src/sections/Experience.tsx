@@ -1,10 +1,15 @@
 import ExperienceComponent from "@/components/ExperienceComponent";
 import { experiences } from "@/data/content";
-import { Box, Divider, Flex, Heading } from "@chakra-ui/react";
+import { Box, Divider, Flex, Heading, theme } from "@chakra-ui/react";
 
 export default function Experience() {
   return (
-    <Box id="experience" padding={12}>
+    <Box
+      id="experience"
+      padding={12}
+      backgroundColor={theme.colors.gray[500]}
+      position="sticky"
+    >
       <Heading fontSize="xxx-large">Experience</Heading>
       <Divider />
       <Flex direction="column" alignItems="center" gap={4} paddingY={4}>

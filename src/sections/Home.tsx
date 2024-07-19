@@ -1,13 +1,22 @@
-"use client";
-
 import { Box, Flex, SimpleGrid, Text, theme } from "@chakra-ui/react";
 import headerImage from "@/../public/undraw_programming_re_kg9v.svg";
 import Image from "next/image";
-import { useRef } from "react";
+import { useState, useEffect } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadBasic } from "@tsparticles/basic";
+import { Engine } from "@tsparticles/engine";
+import { loadParticlesLinksInteraction } from "@tsparticles/interaction-particles-links";
+import { options } from "@/data/particleOptions";
 
 export default function Home() {
   return (
-    <Flex height="100dvh" direction="column" id="home">
+    <Flex
+      height="100dvh"
+      direction="column"
+      id="home"
+      overflowY="clip"
+      backgroundColor={theme.colors.gray[900]}
+    >
       <SimpleGrid
         columns={{ sm: 1, lg: 2 }}
         className="h-full"
@@ -16,8 +25,20 @@ export default function Home() {
         flex={1}
         padding={4}
       >
-        <Image src={headerImage} width={480} alt="Developer graphic" />
-        <Box>
+        <Image
+          src={headerImage}
+          width={480}
+          alt="Developer graphic"
+          style={{
+            position: "sticky",
+          }}
+        />
+        <Box
+          backgroundColor="rgba(0, 0, 0, 0.6)"
+          padding={4}
+          borderRadius={12}
+          backdropFilter="blur(2px)"
+        >
           <Text fontSize="xx-large">Hrishikesh Patil</Text>
           <Text fontSize="larger">Full Stack Web Developer</Text>
           <Text>

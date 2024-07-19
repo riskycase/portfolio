@@ -13,6 +13,7 @@ export default function Contact() {
       justifyContent="space-evenly"
       padding={4}
       backgroundColor={theme.colors.gray[800]}
+      position="sticky"
     >
       {contactDetails.map((contactDetail, index) => (
         <ContactComponent contactDetails={contactDetail} key={index} />

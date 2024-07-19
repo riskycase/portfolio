@@ -1,12 +1,6 @@
 import { ExperienceDetails } from "@/types";
-import {
-  Divider,
-  Flex,
-  Link,
-  ListItem,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react";
+import { Divider, Flex, ListItem, Text, UnorderedList } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import moment from "moment";
 
 export default function ExperienceComponent({
@@ -24,36 +18,45 @@ export default function ExperienceComponent({
       gap={4}
       width={{ base: "100%", md: "48rem" }}
     >
-      {index !== 0 && <Divider />}
-      <Flex
-        justifyContent="space-between"
-        direction={{ base: "column", md: "row" }}
-        alignItems={{ base: "start", md: "center" }}
-        gap={2}
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
       >
-        <Flex direction="column" alignItems="start" gap={2}>
-          <Text fontSize="larger" fontWeight="700">
-            {experienceDetails.title}
-          </Text>
-          <Text>{experienceDetails.comapany}</Text>
-        </Flex>
+        {index !== 0 && <Divider />}
         <Flex
-          direction="column"
-          alignItems={{ base: "start", md: "end" }}
+          justifyContent="space-between"
+          direction={{ base: "column", md: "row" }}
+          alignItems={{ base: "start", md: "center" }}
           gap={2}
         >
-          <Text>{`${dateFormatter(experienceDetails.start)} - ${dateFormatter(
-            experienceDetails.end
-          )}`}</Text>
-          <Text as="i">{experienceDetails.location}</Text>
+          <Flex direction="column" alignItems="start" gap={2}>
+            <Text fontSize="larger" fontWeight="700">
+              {experienceDetails.title}
+            </Text>
+            <Text>{experienceDetails.comapany}</Text>
+          </Flex>
+          <Flex
+            direction="column"
+            alignItems={{ base: "start", md: "end" }}
+            gap={2}
+          >
+            <Text>{`${dateFormatter(experienceDetails.start)} - ${dateFormatter(
+              experienceDetails.end
+            )}`}</Text>
+            <Text as="i">{experienceDetails.location}</Text>
+          </Flex>
         </Flex>
-      </Flex>
-      <Text>{experienceDetails.description}</Text>
-      <UnorderedList>
-        {experienceDetails.points.map((point, index) => (
-          <ListItem key={index}>{point}</ListItem>
-        ))}
-      </UnorderedList>
+        <Text>{experienceDetails.description}</Text>
+        <UnorderedList>
+          {experienceDetails.points.map((point, index) => (
+            <ListItem key={index}>{point}</ListItem>
+          ))}
+        </UnorderedList>
+      </motion.div>
     </Flex>
   );
 }
