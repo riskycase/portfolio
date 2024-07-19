@@ -40,7 +40,16 @@ export default function Navbar() {
             gap={2}
           >
             {menus.map((menu, index) => (
-              <Link key={index} as={NextLink} href={menu.link}>
+              <Link
+                key={index}
+                as={NextLink}
+                href={menu.link}
+                onClick={() => {
+                  document
+                    .getElementById(menu.link.slice(1))
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 {menu.name}
               </Link>
             ))}
@@ -80,7 +89,12 @@ export default function Navbar() {
                       as={NextLink}
                       href={menu.link}
                       fontSize="lg"
-                      onClick={onClose}
+                      onClick={() => {
+                        document
+                          .getElementById(menu.link.slice(1))
+                          ?.scrollIntoView({ behavior: "smooth" });
+                        onClose();
+                      }}
                     >
                       {menu.name}
                     </Link>
