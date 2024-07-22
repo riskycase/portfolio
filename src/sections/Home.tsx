@@ -1,4 +1,4 @@
-import { Box, Flex, SimpleGrid, Text, theme } from "@chakra-ui/react";
+import { Box, Flex, Heading, SimpleGrid, Text, theme } from "@chakra-ui/react";
 import headerImage from "@/../public/undraw_programming_re_kg9v.svg";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -39,7 +39,9 @@ export default function Home() {
           borderRadius={12}
           backdropFilter="blur(2px)"
         >
-          <Text fontSize="xx-large">Hrishikesh Patil</Text>
+          <Heading as={"h1"} fontSize="xx-large">
+            Hrishikesh Patil
+          </Heading>
           <Text fontSize="larger">Full Stack Web Developer</Text>
           <Text>
             Experienced Senior Developer with a demonstrated history of working
