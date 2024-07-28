@@ -4,6 +4,7 @@ import linkscapeImage from "@/../public/linkscape.png";
 import mqttMockImage from "@/../public/mqtt-mock.png";
 import broadcastemImage from "@/../public/broadcastem.png";
 import remoteLedImage from "@/../public/remote_led.png";
+import linkShortenerImage from "@/../public/link-shortener.png";
 import { FaGithub, FaLinkedin, FaPhone } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
 
@@ -60,6 +61,13 @@ export const experiences: ExperienceDetails[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    name: "Link Shortener",
+    description:
+      "In house link shortener built to support short links under riskycase.in domain, with Google login support",
+    link: "https://short.riskycase.in",
+    image: linkShortenerImage,
+  },
   {
     name: "Auto Campnet",
     description:
