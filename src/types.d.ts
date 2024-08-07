@@ -28,3 +28,8 @@ interface ExperienceDetails {
   description: string;
   points: string[];
 }
+
+interface Link {
+  shortCode: string;
+  longLink: string;
+}
