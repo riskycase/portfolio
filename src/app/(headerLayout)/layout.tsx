@@ -6,9 +6,10 @@ import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Hrishikesh Patil",
-  description: "Personal website of Hrishikesh Patil, full stack web developer",
-  robots: "index, follow",
+    title: "Hrishikesh Patil",
+    description:
+        "Personal website of Hrishikesh Patil, full stack web developer",
+    robots: "noindex, nofollow",
 };
 
 export default function RootLayout({
