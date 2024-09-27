@@ -1,12 +1,6 @@
 import { Box, Flex, Heading, SimpleGrid, Text, theme } from "@chakra-ui/react";
 import headerImage from "@/../public/undraw_programming_re_kg9v.svg";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadBasic } from "@tsparticles/basic";
-import { Engine } from "@tsparticles/engine";
-import { loadParticlesLinksInteraction } from "@tsparticles/interaction-particles-links";
-import { options } from "@/data/particleOptions";
 
 export default function Home() {
   return (
@@ -15,7 +9,7 @@ export default function Home() {
       direction="column"
       id="home"
       overflowY="clip"
-      backgroundColor={theme.colors.gray[900]}
+      position="sticky"
     >
       <SimpleGrid
         columns={{ sm: 1, lg: 2 }}

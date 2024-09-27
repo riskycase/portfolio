@@ -1,9 +1,7 @@
 "use client";
 
 import Contact from "@/sections/Contact";
-import Experience from "@/sections/Experience";
 import Home from "@/sections/Home";
-import Projects from "@/sections/Projects";
 import { Box, theme } from "@chakra-ui/react";
 
 import { useState, useEffect } from "react";
@@ -12,6 +10,7 @@ import { loadBasic } from "@tsparticles/basic";
 import { Engine } from "@tsparticles/engine";
 import { loadParticlesLinksInteraction } from "@tsparticles/interaction-particles-links";
 import { options } from "@/data/particleOptions";
+import Subcontainer from "@/sections/Subcontainer";
 
 export default function Page() {
   const [init, setInit] = useState(false);
@@ -39,8 +38,7 @@ export default function Page() {
         overflowX="clip"
       >
         <Home />
-        <Experience />
-        <Projects />
+        <Subcontainer />
         <Contact />
       </Box>
     </>

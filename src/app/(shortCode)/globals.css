@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
-  background-color: transparent;
+    background-color: transparent;
+    height: 100%;
+    overflow: auto;
 }
