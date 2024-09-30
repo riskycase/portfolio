@@ -26,6 +26,7 @@ export default function Home() {
           style={{
             position: "sticky",
           }}
+          priority={true}
         />
         <Box
           backgroundColor="rgba(0, 0, 0, 0.6)"

@@ -1,10 +1,10 @@
 import { Project, MenuItem, ContactDetails, ExperienceDetails } from "@/types";
-import autoCampnetImage from "@/../public/autoCampnetImage.png";
-import linkscapeImage from "@/../public/linkscape.png";
-import mqttMockImage from "@/../public/mqtt-mock.png";
-import broadcastemImage from "@/../public/broadcastem.png";
-import remoteLedImage from "@/../public/remote_led.png";
-import linkShortenerImage from "@/../public/link-shortener.png";
+import autoCampnetImage from "@/../public/autoCampnetImage.webp";
+import linkscapeImage from "@/../public/linkscape.webp";
+import mqttMockImage from "@/../public/mqtt-mock.webp";
+import broadcastemImage from "@/../public/broadcastem.webp";
+import remoteLedImage from "@/../public/remote_led.webp";
+import linkShortenerImage from "@/../public/link-shortener.webp";
 import { FaGithub, FaLinkedin, FaPhone } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
 
