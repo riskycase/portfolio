@@ -14,8 +14,11 @@ export default async function RedirectVisibleComponent({
       direction="column"
       alignItems="center"
       gap={4}
+      padding={4}
       justifyContent="center"
+      textAlign="center"
       className="h-dvh"
+      wordBreak="keep-all"
     >
       <Heading>You are being redirected</Heading>
       <Text>The link riskycase.in/{link.shortCode} redirects to</Text>
