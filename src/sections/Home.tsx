@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, SimpleGrid, Text, theme } from "@chakra-ui/react";
-import headerImage from "@/../public/undraw_programming_re_kg9v.svg";
+import headerImage from "@/../public/undraw_programming_re_kg9v.webp";
 import Image from "next/image";
 
 export default function Home() {

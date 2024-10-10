@@ -1,6 +1,6 @@
 import { Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import graphic from "@/../public/undraw_access_denied_re_awnf.svg";
+import graphic from "@/../public/undraw_access_denied_re_awnf.webp";
 import { Suspense } from "react";
 import RedirectComponent from "@/components/redirect/redirectComponent";
 import RedirectVisibleComponent from "@/components/redirect/redirectVisibleComponent";
