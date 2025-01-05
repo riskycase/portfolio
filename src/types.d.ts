@@ -23,7 +23,7 @@ interface ExperienceDetails {
   comapany: string;
   title: string;
   start: Date;
-  end: Date;
+  end?: Date | undefined;
   location: string;
   description: string;
   points: string[];

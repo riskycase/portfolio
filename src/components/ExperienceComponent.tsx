@@ -44,9 +44,9 @@ export default function ExperienceComponent({
             alignItems={{ base: "start", md: "end" }}
             gap={2}
           >
-            <Text>{`${dateFormatter(experienceDetails.start)} - ${dateFormatter(
+            <Text>{`${dateFormatter(experienceDetails.start)} - ${experienceDetails.end ? dateFormatter(
               experienceDetails.end
-            )}`}</Text>
+            ) : 'Present'}`}</Text>
             <Text as="i">{experienceDetails.location}</Text>
           </Flex>
         </Flex>

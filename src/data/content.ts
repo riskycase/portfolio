@@ -34,6 +34,16 @@ export const menus: MenuItem[] = [
 export const experiences: ExperienceDetails[] = [
   {
     comapany: "Amazon.com Inc",
+    title: "Software Development Engineer",
+    start: new Date(2024, 9),
+    location: "Bangalore, KA",
+    description:
+      "SDE-I in AWS Data Center Power Management",
+    points: [
+    ],
+  },
+  {
+    comapany: "Amazon.com Inc",
     title: "Software Development Engineer Intern",
     start: new Date(2023, 6),
     end: new Date(2023, 11),
