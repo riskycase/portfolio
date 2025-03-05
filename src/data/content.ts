@@ -5,6 +5,8 @@ import mqttMockImage from "@/../public/mqtt-mock.webp";
 import broadcastemImage from "@/../public/broadcastem.webp";
 import remoteLedImage from "@/../public/remote_led.webp";
 import linkShortenerImage from "@/../public/link-shortener.webp";
+import devicesServerImage from "@/../public/devices.webp";
+import utilsImage from "@/../public/misc-utils.webp";
 import { FaGithub, FaLinkedin, FaPhone } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
 
@@ -71,6 +73,20 @@ export const experiences: ExperienceDetails[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    name: "Devices Server",
+    description:
+      "One stop dashboard to connect multiple devices",
+    link: "https://devices.riskycase.in",
+    image: devicesServerImage,
+  },
+  {
+    name: "Misc Utils",
+    description:
+      "Misc utils for everyday development tasks",
+    link: "https://utils.riskycase.in",
+    image: utilsImage,
+  },
   {
     name: "Link Shortener",
     description:
