@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Hrishikesh Patil",
   description: "Personal website of Hrishikesh Patil, full stack web developer",
   robots: "index, follow",
+  alternates: {
+    canonical: "https://riskycase.in"
+  }
 };
 
 export default function RootLayout({
