@@ -1,19 +1,21 @@
 import { Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import graphic from "@/../public/undraw_access_denied_re_awnf.webp";
-import { Suspense } from "react";
 import RedirectComponent from "@/components/redirect/redirectComponent";
-import RedirectVisibleComponent from "@/components/redirect/redirectVisibleComponent";
 
-export const runtime = "edge";
+export const runtime = 'edge';
 
-export default async function ShortCode({
-  params: { shortCode },
-}: {
-  params: { shortCode: string };
-}) {
+interface ShortCodeProps {
+  params: Promise<{ shortCode: string }>;
+}
+
+export default async function ShortCode({ params }: ShortCodeProps) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_LINK_SHORTENER_HOME}/${shortCode}/redirect`,
+    `${process.env.NEXT_PUBLIC_LINK_SHORTENER_HOME}/${
+      (
+        await params
+      ).shortCode
+    }/redirect`,
     {
       next: { revalidate: 0 },
     }
@@ -21,13 +23,7 @@ export default async function ShortCode({
   const body = JSON.parse(await response.text());
   if (body.longLink) {
     const delay = 15;
-    return (
-      <Suspense
-        fallback={<RedirectVisibleComponent link={body} delay={delay} />}
-      >
-        <RedirectComponent link={body.longLink} delay={delay} />
-      </Suspense>
-    );
+    return <RedirectComponent link={body} delay={delay} />;
   } else
     return (
       <SimpleGrid

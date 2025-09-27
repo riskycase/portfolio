@@ -13,38 +13,40 @@
         "deploy": "npm run pages:build && wrangler pages deploy"
     },
     "dependencies": {
-        "@chakra-ui/next-js": "^2.2.0",
-        "@chakra-ui/react": "^2.8.2",
-        "@emotion/react": "11.13.3",
-        "@emotion/styled": "11.13.0",
-        "@tsparticles/basic": "^3.5.0",
-        "@tsparticles/engine": "^3.5.0",
-        "@tsparticles/preset-links": "^3.1.0",
+        "@chakra-ui/next-js": "^2.4.2",
+        "@chakra-ui/react": "^2.10.4",
+        "@emotion/react": "11.14.0",
+        "@emotion/styled": "11.14.1",
+        "@tailwindcss/postcss": "^4.1.13",
+        "@tsparticles/basic": "^3.9.1",
+        "@tsparticles/engine": "^3.9.1",
+        "@tsparticles/preset-links": "^3.2.0",
         "@tsparticles/react": "^3.0.0",
-        "framer-motion": "11.9.0",
+        "framer-motion": "12.23.12",
         "moment": "^2.30.1",
-        "next": "^14.2.13",
+        "next": "^15.0.0",
         "react": "^18",
         "react-dom": "^18",
-        "react-icons": "5.3.0",
-        "sharp": "0.33.5"
+        "react-icons": "5.5.0",
+        "sharp": "0.34.3"
     },
     "devDependencies": {
-        "@cloudflare/next-on-pages": "1.13.3",
+        "@cloudflare/next-on-pages": "^1.13.16",
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",
         "eslint": "^8",
-        "eslint-config-next": "14.2.13",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-next-on-pages": "^1.13.3",
-        "husky": "^9.1.1",
-        "lint-staged": "^15.2.7",
+        "eslint-config-next": "14.2.32",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-next-on-pages": "^1.13.16",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.1.6",
         "postcss": "^8",
-        "tailwindcss": "^3.4.1",
+        "tailwindcss": "^4.1.13",
         "typescript": "^5"
     },
     "engines": {
         "node": "^20"
-    }
+    },
+    "packageManager": "npm@11.6.1+sha512.ee20d21c3a2ea7ab8c409dfbc96ae17ea71b3211745047c645aa7a36ff9a29072b2095e50a2d9c29b8fbe5606688795cc2c402cbf534cc4c0365d031e87fd56b"
 }

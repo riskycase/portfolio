@@ -1,13 +1,45 @@
-import { redirect } from "next/navigation";
+"use client";
 
-export default async function RedirectComponent({
+import { Link } from "@/types";
+import { Flex, Heading, Link as LinkComponent, Text } from "@chakra-ui/react";
+import NextLink from "next/link";
+
+export default function RedirectComponent({
   link,
-  delay = 5,
+  delay,
 }: {
-  link: string;
+  link: Link;
   delay: number;
 }) {
-  await new Promise((resolve) => setTimeout(resolve, delay * 1000));
-  redirect(link);
-  return <></>;
+  setTimeout(() => window.location.replace(link.longLink), delay * 1000);
+  return (
+    <Flex
+      direction="column"
+      alignItems="center"
+      gap={4}
+      padding={4}
+      justifyContent="center"
+      textAlign="center"
+      className="h-dvh"
+      wordBreak="keep-all"
+    >
+      <Heading>You are being redirected</Heading>
+      <Text>The link riskycase.in/{link.shortCode} redirects to</Text>
+      <LinkComponent as={NextLink} href={link.longLink} wordBreak="break-all">
+        {link.longLink}
+      </LinkComponent>
+      <Text>
+        In case this does not seem right, you can report the link below
+      </Text>
+      <LinkComponent
+        as={NextLink}
+        href={`${process.env.NEXT_PUBLIC_LINK_SHORTENER_HOME}/${link.shortCode}/report`}
+        wordBreak="break-all"
+      >
+        <Text>
+          {process.env.NEXT_PUBLIC_LINK_SHORTENER_HOME}/{link.shortCode}/report
+        </Text>
+      </LinkComponent>
+    </Flex>
+  );
 }
