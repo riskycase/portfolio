@@ -13,5 +13,20 @@
       "binding": "WORKER_SELF_REFERENCE",
       "service": "portfolio"
     }
+  ],
+  "previews": {},
+  "preview_urls": true,
+  "routes": [
+    {
+      "pattern": "riskycase.in",
+      "custom_domain": true,
+      "previews_enabled": true,
+      "enabled": true
+    },
+    {
+      "pattern": "riskycase.com",
+      "custom_domain": true,
+      "enabled": true,
+    }
   ]
 }
