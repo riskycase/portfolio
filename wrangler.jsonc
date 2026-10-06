@@ -20,8 +20,12 @@
     {
       "pattern": "riskycase.in",
       "custom_domain": true,
-      "previews_enabled": true,
       "enabled": true
+    },
+    {
+      "pattern": "preview.riskycase.in",
+      "custom_domain": true,
+      "previews_enabled": true,
     },
     {
       "pattern": "riskycase.com",
