@@ -25,7 +25,7 @@ export default function Navbar() {
   const { isOpen, onToggle, onClose } = useDisclosure();
   const menuRef = useRef(null);
   return (
-    <header className="w-full sticky top-0 z-10">
+    <header style={{ width: "100%", top: 0, position: "sticky", zIndex: 10 }}>
       <Box
         width="100%"
         padding={4}
