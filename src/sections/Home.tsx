@@ -39,7 +39,7 @@ export default function Home() {
           </Heading>
           <Text fontSize="larger">Full Stack Web Developer</Text>
           <Text>
-            Experienced Senior Developer with a demonstrated history of working
+            Experienced Developer with a demonstrated history of working
             in the information technology and services industry. Graduated with
             a Bachelor of Engineering in Electrical and Electronics Engineering
             from Birla Institute of Technology and Science, Pilani - Goa Campus.
