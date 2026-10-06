@@ -8,15 +8,17 @@
         "start": "next start",
         "lint": "next lint",
         "prepare": "husky",
-        "pages:build": "npx @cloudflare/next-on-pages",
-        "preview": "npm run pages:build && wrangler pages dev",
-        "deploy": "npm run pages:build && wrangler pages deploy"
+        "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+        "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+        "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+        "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
     },
     "dependencies": {
         "@chakra-ui/next-js": "^2.4.2",
         "@chakra-ui/react": "^2.10.4",
         "@emotion/react": "11.14.0",
         "@emotion/styled": "11.14.1",
+        "@opennextjs/cloudflare": "^1.20.8",
         "@tailwindcss/postcss": "^4.1.13",
         "@tsparticles/basic": "^3.9.1",
         "@tsparticles/engine": "^3.9.1",
@@ -31,22 +33,21 @@
         "sharp": "0.34.3"
     },
     "devDependencies": {
-        "@cloudflare/next-on-pages": "^1.13.16",
-        "@types/node": "^20",
+        "@types/node": "^24",
         "@types/react": "^18",
         "@types/react-dom": "^18",
         "eslint": "^8",
         "eslint-config-next": "14.2.32",
         "eslint-config-prettier": "^10.1.8",
-        "eslint-plugin-next-on-pages": "^1.13.16",
         "husky": "^9.1.7",
         "lint-staged": "^16.1.6",
         "postcss": "^8",
         "tailwindcss": "^4.1.13",
-        "typescript": "^5"
+        "typescript": "^5",
+        "wrangler": "^4.147.0"
     },
     "engines": {
-        "node": "^20"
+        "node": "^24"
     },
-    "packageManager": "npm@11.6.1+sha512.ee20d21c3a2ea7ab8c409dfbc96ae17ea71b3211745047c645aa7a36ff9a29072b2095e50a2d9c29b8fbe5606688795cc2c402cbf534cc4c0365d031e87fd56b"
+    "packageManager": "npm@12.2.0+sha512.66c2632a94e796649738b2d7894d710c2cc2e1696893823066687f6b0d8a52e5f2b54eeaeaa32ffdc513ecca1e49ff794a5c2ec3f9515d879f1b3182b291cf35"
 }

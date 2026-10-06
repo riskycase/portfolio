@@ -3,8 +3,6 @@ import Image from "next/image";
 import graphic from "@/../public/undraw_access_denied_re_awnf.webp";
 import RedirectComponent from "@/components/redirect/redirectComponent";
 
-export const runtime = 'edge';
-
 interface ShortCodeProps {
   params: Promise<{ shortCode: string }>;
 }
