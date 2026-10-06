@@ -42,6 +42,8 @@ export const experiences: ExperienceDetails[] = [
     description:
       "SDE-I in AWS Data Center Power Management",
     points: [
+      "Expanded source of truth for power metrics for data centers to include legacy design sites as well as colocation sites, completing the single source of truth.",
+      "Set up a single service to expose all power related data to downstream services so that all consumers can onboard once for any power related data.",
     ],
   },
   {
