@@ -28,5 +28,11 @@
       "custom_domain": true,
       "enabled": true,
     }
-  ]
+  ],
+  "observability": {
+    "logs": {
+      "enabled": false,
+      "invocation_logs": true
+    }
+  }
 }
