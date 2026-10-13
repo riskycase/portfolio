@@ -20,7 +20,7 @@ export default async function ShortCode({ params }: ShortCodeProps) {
   );
   const body = JSON.parse(await response.text());
   if (body.longLink) {
-    const delay = 15;
+    const delay = 5;
     return <RedirectComponent link={body} delay={delay} />;
   } else
     return (
